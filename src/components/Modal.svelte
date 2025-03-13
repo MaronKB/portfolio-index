@@ -1,6 +1,6 @@
 <script lang="ts">
 import {FontAwesomeIcon} from "@fortawesome/svelte-fontawesome";
-import {faHashtag, faTimes, faUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
+import {faHashtag, faHome, faTimes, faUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 
 export let opened: boolean = false;
@@ -18,6 +18,10 @@ export let tags: string[] = [];
             <div class="title">
                 <h3>{title}</h3>
                 <a href={link} target="_blank">{link}</a>
+            </div>
+            <div class="links">
+                <a href={link} target="_blank"><FontAwesomeIcon icon={faHome}/></a>
+                <a href={source}><FontAwesomeIcon icon={faGithub}/></a>
             </div>
             <button type="button" class="close" onclick={() => opened = false}>
                 <span><FontAwesomeIcon icon={faTimes}/></span>
@@ -58,7 +62,7 @@ export let tags: string[] = [];
                 <h3>Challenges</h3>
                 <slot name="challenges"></slot>
             </div>
-            <a href={source}><FontAwesomeIcon icon={faGithub}/>Source<FontAwesomeIcon icon={faUpRightFromSquare}/></a>
+            <a class="source" href={source}><FontAwesomeIcon icon={faGithub}/>Source<FontAwesomeIcon icon={faUpRightFromSquare}/></a>
         </div>
     </div>
 </div>
@@ -79,7 +83,6 @@ export let tags: string[] = [];
         pointer-events: none;
         transition: opacity 0.3s;
     }
-
     .modal-background.opened {
         opacity: 1;
         pointer-events: auto;
@@ -109,16 +112,34 @@ export let tags: string[] = [];
     }
 
     .title {
+        flex: 1;
         padding: 0 20px;
     }
-
-    .title h3 {
+    .title > h3 {
         font-size: 18px;
     }
-    .title a {
+    .title > a {
         font-size: 12px;
         color: var(--text-color-3);
         opacity: 0.75;
+    }
+
+    .links {
+        display: flex;
+    }
+    .links > a {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .links > a:hover {
+        background: var(--background-color-3);
     }
 
     .header button {
@@ -139,8 +160,7 @@ export let tags: string[] = [];
         width: 100%;
         height: 160px;
         background: white;
-        padding: 20px;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .content {
@@ -148,18 +168,6 @@ export let tags: string[] = [];
         width: 100%;
         padding: 20px 30px;
         overflow-y: auto;
-    }
-
-    .content > a {
-        align-self: flex-end;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2px;
-        font-size: 12px;
-        color: var(--text-color-3);
-        opacity: 0.75;
-        margin: auto 0 0 0;
     }
 
     .tags {
@@ -191,7 +199,6 @@ export let tags: string[] = [];
         align-items: flex-start;
         padding: 10px 0;
     }
-
     .item h3 {
         width: 100%;
         font-size: 16px;
@@ -202,9 +209,16 @@ export let tags: string[] = [];
         opacity: 0.75;
     }
 
-    .close {
-        background: none;
-        border: none;
-        cursor: pointer;
+    .source {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+        color: var(--text-color-3);
+        opacity: 0.75;
+        margin: 20px 0 0 0;
     }
 </style>

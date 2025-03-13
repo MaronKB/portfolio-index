@@ -64,14 +64,13 @@
         justify-content: center;
         align-items: center;
         background: var(--background-light);
-        padding: 20px;
         overflow: hidden;
     }
 
     .image img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .text {
@@ -136,5 +135,9 @@
     }
     .expand:hover {
         background: var(--background-color);
+    }
+
+    p {
+        font-size: 14px;
     }
 </style>
