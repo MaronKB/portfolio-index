@@ -1,0 +1,92 @@
+@import "font.css";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --font-heading: "Black Han Sans", sans-serif;
+    --font-text: "Pretendard-Regular";
+    --font-handwrite: "iceJaram-Rg";
+
+    --font-weight-light: 100;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --text-light: #f8f9fa;
+    --text-light-2: #e9ecef;
+    --text-light-3: #dee2e6;
+    --text-dark: #343a40;
+    --text-dark-2: #495057;
+    --text-dark-3: #6c757d;
+    --text-highlight: #007bff;
+    --text-muted: #6c757d;
+    --text-success: #28a745;
+    --text-danger: #dc3545;
+    --text-warning: #ffc107;
+    --text-info: #17a2b8;
+    --background-light: #f8f9fa;
+    --background-light-2: #e9ecef;
+    --background-light-3: #dee2e6;
+    --background-dark: #343a40;
+    --background-dark-2: #495057;
+    --background-dark-3: #6c757d;
+}
+body {
+    font-family: var(--font-text), sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color-3);
+    margin: 0;
+    padding: 0;
+
+    --text-color: var(--text-dark);
+    --text-color-2: var(--text-dark-2);
+    --text-color-3: var(--text-dark-3);
+    --background-color: var(--background-light);
+    --background-color-2: var(--background-light-2);
+    --background-color-3: var(--background-light-3);
+}
+body.dark {
+    --text-color: var(--text-light);
+    --text-color-2: var(--text-light-2);
+    --text-color-3: var(--text-light-3);
+    --background-color: var(--background-dark);
+    --background-color-2: var(--background-dark-2);
+    --background-color-3: var(--background-dark-3);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    flex: 1;
+    height: 100vh;
+    overflow-y: scroll;
+}
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+a:visited {
+    color: var(--text-color);
+}
+a:hover {
+    color: var(--text-color);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+#app {
+    display: flex;
+}
