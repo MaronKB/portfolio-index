@@ -26,7 +26,7 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
                 summary="개인 홈페이지입니다."
         >
             <ul slot="tech-stack">
-                <li>Language: JavaScript, TypeScript</li>
+                <li>Language: JavaScript</li>
                 <li>Frontend: React</li>
                 <li>Backend: Node.js, Express</li>
                 <li>Build: Webpack</li>
@@ -34,7 +34,6 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
                 <li>Build: Webpack</li>
                 <li>Auth: OAuth2</li>
                 <li>Version Control: Git</li>
-                <li>Documentation: Markdown</li>
                 <li>Source Code Management: Github</li>
                 <li>Web Server: Express</li>
                 <li>Reverse Proxy: NGINX</li>
@@ -81,7 +80,6 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
                 <li>Frontend: Svelte</li>
                 <li>Build: Vite</li>
                 <li>Version Control: Git</li>
-                <li>Documentation: Markdown</li>
                 <li>Source Code Management: Github</li>
                 <li>Web Server & Reverse Proxy: NGINX</li>
             </ul>
@@ -136,7 +134,7 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
                 <li>퍼블리싱</li>
             </ul>
             <ul slot="development-period">
-                <li>2023.08 ~ 2024.09 (3주)</li>
+                <li>2023.08 ~ 2023.09 (3주)</li>
             </ul>
             <ul slot="outcome">
                 <li>외주 프로젝트 완료</li>
@@ -369,7 +367,7 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
                 <li>디자인 및 퍼블리싱</li>
             </ul>
             <ul slot="development-period">
-                <li>2025.03 ~ 2023.03 (2주)</li>
+                <li>2025.03 ~ 2025.03 (2주)</li>
             </ul>
             <ul slot="outcome">
                 <li>일일 평균 이용자 수 10명 이상</li>

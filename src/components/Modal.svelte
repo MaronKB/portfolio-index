@@ -8,7 +8,6 @@ export let title: string = "Modal";
 export let link: string = "";
 export let img: string = "";
 export let source: string = "";
-export let tags: string[] = [];
 
 </script>
 
@@ -21,7 +20,7 @@ export let tags: string[] = [];
             </div>
             <div class="links">
                 <a href={link} target="_blank"><FontAwesomeIcon icon={faHome}/></a>
-                <a href={source}><FontAwesomeIcon icon={faGithub}/></a>
+                <a href={source} target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
             </div>
             <button type="button" class="close" onclick={() => opened = false}>
                 <span><FontAwesomeIcon icon={faTimes}/></span>
