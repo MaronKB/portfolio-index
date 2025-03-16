@@ -1,5 +1,7 @@
 <script lang="ts">
     import Modal from "./Modal.svelte";
+    import {faHashtag} from "@fortawesome/free-solid-svg-icons";
+    import {FontAwesomeIcon} from "@fortawesome/svelte-fontawesome";
 
     export let title: string;
     export let image: string;
@@ -18,8 +20,13 @@
     </button>
     <div class="text">
         <h4>{title}</h4>
-        <a href={link}>{address}</a>
+        <a href={link} target="_blank">{address}</a>
         <hr/>
+        <div class="tags">
+            {#each tags as tag}
+                <span><FontAwesomeIcon icon={faHashtag}/>{tag}</span>
+            {/each}
+        </div>
         <div class="summary">
             <p>{summary}</p>
         </div>
@@ -104,12 +111,36 @@
         opacity: 1;
         text-decoration: underline;
     }
+
     hr {
         width: 100%;
         height: 1px;
         background: var(--text-color-3);
         opacity: 0.25;
     }
+
+    .tags {
+        width: 100%;
+        font-size: 10px;
+        white-space: nowrap;
+        margin: 4px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .tags span {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        white-space: nowrap;
+        color: var(--text-color-3);
+        padding: 3px 8px;
+        border: 1px solid var(--text-color-3);
+        border-radius: 2px;
+        margin: 0 2px 0 0;
+        pointer-events: none;
+    }
+
     .summary {
         flex: 1;
         width: 100%;

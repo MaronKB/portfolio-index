@@ -10,7 +10,7 @@
         faScrewdriverWrench,
         faSun,
     } from '@fortawesome/free-solid-svg-icons'
-    import { faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
+    import {faInstagram, faGithub, faXTwitter} from '@fortawesome/free-brands-svg-icons'
     import {onMount} from "svelte";
 
     let theme: HTMLInputElement;
@@ -31,7 +31,6 @@
     const scroll = (ev: Event) => {
         ev.preventDefault();
 
-        const sections = document.querySelectorAll('section');
         const target = ev.target as HTMLAnchorElement;
         const targetSection = document.querySelector(`#${target.dataset.target}`) as HTMLElement;
         if (targetSection) {
@@ -128,9 +127,9 @@
         </label>
     </div>
     <div class="socials">
-        <a href="/" class="social"><FontAwesomeIcon icon={faTwitter}/></a>
-        <a href="/" class="social"><FontAwesomeIcon icon={faGithub}/></a>
-        <a href="/" class="social"><FontAwesomeIcon icon={faInstagram}/></a>
+        <a href="https://x.com/asdfgh7913" target="_blank" class="social"><FontAwesomeIcon icon={faXTwitter}/></a>
+        <a href="https://github.com/MaronKB" target="_blank" class="social"><FontAwesomeIcon icon={faGithub}/></a>
+        <a href="https://www.instagram.com/heehee_iron" target="_blank" class="social"><FontAwesomeIcon icon={faInstagram}/></a>
     </div>
     {#if !folded}
         <div class="copy">

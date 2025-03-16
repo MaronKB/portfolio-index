@@ -81,13 +81,12 @@
 
 <style>
     section {
-        display: flex;
-        padding: 80px 2px;
+        padding: 80px 40px;
         perspective: 1000px;
     }
     @media (max-width: 600px) {
         section {
-            padding: 0;
+            padding: 80px 0;
         }
     }
     .container {
@@ -181,7 +180,7 @@
     }
     .description > p > span {
         font-weight: var(--font-weight-bold);
-        color: var(--text-color);
+        color: var(--text-highlight);
     }
     .tags {
         width: calc(100vw - 20px);

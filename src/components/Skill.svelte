@@ -7,7 +7,7 @@
 
 <div class="skill">
     <div class="skill-field"
-         style={`background: conic-gradient(white ${percentage}%, #aaaaaa77 ${percentage}%)`}>
+         style={`background: conic-gradient(var(--text-highlight) ${percentage}%, #aaaaaa77 ${percentage}%)`}>
         <div class="skill-img-container">
             <img class="skill-img" src={image} alt={name}/>
         </div>
@@ -69,7 +69,7 @@
         background: white;
         padding: 10px;
         border-radius: 50%;
-        box-shadow: 0 0 5px #0003;
+        box-shadow: 0 0 4px #0005 inset;
         overflow: hidden;
     }
     .skill-img {

@@ -30,21 +30,16 @@ import docker from "../assets/docker.png";
 import ubuntu from "../assets/ubuntu.png";
 import intellij from "../assets/intellij.png";
 import nginx from "../assets/nginx.svg";
-
-import lang from "../assets/lang.jpg";
-import programming from "../assets/programming.jpg";
-import server from "../assets/server.jpg";
-import database from "../assets/database.jpg";
-import tools from "../assets/tools.jpg";
 </script>
 
 <section id="skills">
+    <h2>Skills</h2>
     <div class="container">
         <h3>Languages</h3>
         <Skill
                 name="Java"
                 image={java}
-                percentage="70"
+                percentage="60"
                 list={["SE JDK 11, 17, 21, 23 사용 경험 있음", "객체 지향 프로그래밍과 절차 지향 프로그래밍 간 차이점과 그 장단점을 인식하고, 언어의 목적에 부합하는 구조로 패키지를 작성할 수 있음", "버전 11 - 23 간 차이점을 이해하고, 버전별 기능 및 문법에 맞게 코드를 작성할 수 있음"]}
         />
         <Skill
@@ -56,19 +51,19 @@ import tools from "../assets/tools.jpg";
         <Skill
                 name="Typescript"
                 image={typescript}
-                percentage="90"
+                percentage="70"
                 list={["동적 타입과 정적 타입의 장단점을 파악하고 타입스크립트를 사용해야 하는 이유를 충분히 이해하고 있음", "인터페이스, 타입 지정, 상속 등을 효율적으로 이용하여 코드 길이를 줄이는 데에 특화됨"]}
         />
         <Skill
                 name="C#"
                 image={csharp}
-                percentage="60"
+                percentage="40"
                 list={["인스턴스 개념을 이해하고 싱글톤 패턴을 사용하여 최적의 메모리를 사용하도록 코드를 작성할 수 있음", "Unity 엔진을 이용한 애플리케이션 개발 가능"]}
         />
         <Skill
                 name="SQL"
                 image={sql}
-                percentage="70"
+                percentage="40"
                 list={["Oracle, MySQL 간 문법 차이를 이해하고 쿼리문을 작성할 수 있음", "동적 쿼리문을 사용한 데이터베이스 입출력 자동화 프로세스에 특화"]}
         />
         <Skill
@@ -80,7 +75,7 @@ import tools from "../assets/tools.jpg";
         <Skill
                 name="Bash, PowerShell, Linux Shell"
                 image={bash}
-                percentage="70"
+                percentage="40"
                 list={["GUI가 없는 서버 전용 OS를 능숙하게 사용할 수 있음", "클라우드 서버를 사용한 애플리케이션 배포 환경 구성이 자유로움", "쉘 스크립트를 사용한 자동화 프로세스 구축 가능"]}
         />
     </div>
@@ -107,13 +102,13 @@ import tools from "../assets/tools.jpg";
         <Skill
                 name="Wordpress"
                 image={wordpress}
-                percentage="70"
+                percentage="60"
                 list={["Wordpress의 테마 및 플러그인 개발 가능", "Wordpress의 기본 기능을 활용하여 웹사이트 구축 가능", "운영 측면에서 개발 관련 지식 없이 유지 보수가 가능한 관리 프로세스를 설계하고 구현할 수 있음"]}
         />
         <Skill
                 name="JSP"
                 image={jsp}
-                percentage="60"
+                percentage="50"
                 list={["JSP의 기본 문법을 이해하고, JSP를 사용한 웹 애플리케이션 개발 가능", "JSTL을 사용한 JSP 페이지 구성 가능", "EL(Expression Language)을 사용한 데이터 바인딩 가능"]}
         />
     </div>
@@ -122,7 +117,7 @@ import tools from "../assets/tools.jpg";
         <Skill
                 name="Spring"
                 image={spring}
-                percentage="80"
+                percentage="50"
                 list={["Spring MVC 모델을 포함한 여러 디자인 패턴 간의 차이점을 인식하고 서비스에 적합한 종류를 선택할 수 있음", "Spring Boot를 사용한 REST API 구축 가능", "Spring Security를 사용한 인증 및 권한 관리 가능", "Spring Data JPA를 사용한 데이터베이스 입출력 자동화 가능"]}
         />
         <Skill
@@ -134,13 +129,13 @@ import tools from "../assets/tools.jpg";
         <Skill
                 name="Express"
                 image={express}
-                percentage="70"
+                percentage="80"
                 list={["Express Generator를 사용한 프로젝트 구성 및 관리 가능", "WebSocket과 데이터베이스 입출력, REST API 등 백엔드 서버에 필요한 기능과, 프록싱, 정적 파일 호스팅, 파일 업로드/다운로드 등 웹서버에 필요한 기능 모두 운용 가능", "Middleware를 사용한 요청 처리 가능"]}
         />
         <Skill
                 name="MyBatis"
                 image={mybatis}
-                percentage="60"
+                percentage="40"
                 list={["MyBatis의 Mapper와 SQL, 동적 쿼리문을 사용한 데이터베이스 입출력 자동화 가능"]}
         />
     </div>
@@ -149,13 +144,13 @@ import tools from "../assets/tools.jpg";
         <Skill
                 name="Oracle"
                 image={oracle}
-                percentage="70"
+                percentage="40"
                 list={["DBMS와 버전에 따른 SQL 문법의 차이점을 이해하고, 이용하고자 하는 DBMS에 맞게 쿼리문을 작성할 수 있음", "Oracle SQL Developer를 사용한 데이터베이스 관리 가능", "PL/SQL을 사용한 프로시저 및 트리거 작성에 능통함"]}
         />
         <Skill
                 name="MongoDB"
                 image={mongodb}
-                percentage="60"
+                percentage="50"
                 list={["NoSQL DBMS의 장단점을 인식하고, 개발 목적에 맞는 DBMS를 취사 선택할 수 있음", "Mongoose를 사용한 데이터베이스 입출력 자동화 가능", "보안, 백업, 권한 및 데이터베이스 / 테이블 관리 등 비 서비스 관련 이슈를 관리할 수 있음"]}
         />
     </div>
@@ -164,13 +159,13 @@ import tools from "../assets/tools.jpg";
         <Skill
                 name="Git"
                 image={git}
-                percentage="80"
+                percentage="60"
                 list={["Git Bash를 사용한 버전 관리 가능", "GitHub, GitLab 등을 사용한 원격 저장소 관리 가능", "Git Flow를 사용한 팀 프로젝트 관리 가능"]}
         />
         <Skill
                 name="Vite"
                 image={vite}
-                percentage="70"
+                percentage="50"
                 list={["Vite를 사용하여 프로젝트를 구성하여 관리하고, 이를 빌드 하고 배포할 수 있음", "테스트 및 디버깅 절차를 이해하고, 이를 통해 프로젝트를 효율적으로 관리할 수 있음"]}
         />
         <Skill
@@ -182,13 +177,13 @@ import tools from "../assets/tools.jpg";
         <Skill
                 name="Docker"
                 image={docker}
-                percentage="70"
+                percentage="50"
                 list={["Docker를 사용한 컨테이너, 이미지 관리 가능", "Docker 사용 환경에서의 네트워크 구성에 익숙함"]}
         />
         <Skill
                 name="Ubuntu"
                 image={ubuntu}
-                percentage="60"
+                percentage="50"
                 list={["Ubuntu를 사용한 서버 구축 및 관리 가능", "리눅스 환경에서의 네트워크 구성 및 보안 설정 가능", "Ubuntu를 사용한 서버 모니터링 및 로그 분석 가능"]}
         />
         <Skill
@@ -208,13 +203,6 @@ import tools from "../assets/tools.jpg";
 
 <style>
     #skills {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        padding: 40px;
         perspective: 3000px;
     }
     @media (max-width: 900px) {

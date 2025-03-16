@@ -8,6 +8,7 @@
     import Skills from "./components/Skills.svelte";
     import Portfolio from "./components/Portfolio.svelte";
     import Contact from "./components/Contact.svelte";
+    import Divider from "./components/Divider.svelte";
 
     const scroll = () => {
         const sections = document.querySelectorAll('section');
@@ -26,7 +27,11 @@
 <main>
     <Home/>
     <About/>
+    <Divider/>
     <Skills/>
+    <Divider/>
     <Portfolio/>
+    <Divider/>
     <Contact/>
+    <Footer/>
 </main>

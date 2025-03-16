@@ -19,29 +19,31 @@
     --text-dark: #343a40;
     --text-dark-2: #495057;
     --text-dark-3: #6c757d;
-    --text-highlight: #007bff;
+    --text-highlight-light: #ffffff;
+    --text-highlight-dark: #1f354a;
     --text-muted: #6c757d;
     --text-success: #28a745;
     --text-danger: #dc3545;
     --text-warning: #ffc107;
     --text-info: #17a2b8;
-    --background-light: #f8f9fa;
-    --background-light-2: #e9ecef;
-    --background-light-3: #dee2e6;
-    --background-dark: #343a40;
-    --background-dark-2: #495057;
-    --background-dark-3: #6c757d;
+    --background-light: #e5e8ed;
+    --background-light-2: #d1d5dc;
+    --background-light-3: #c3c9d1;
+    --background-dark: #20262b;
+    --background-dark-2: #434e57;
+    --background-dark-3: #6e7a81;
 }
 body {
     font-family: var(--font-text), sans-serif;
     color: var(--text-color);
-    background-color: var(--background-color-3);
+    background: linear-gradient(135deg, var(--background-color-2), var(--background-color-3), var(--background-color));
     margin: 0;
     padding: 0;
 
     --text-color: var(--text-dark);
     --text-color-2: var(--text-dark-2);
     --text-color-3: var(--text-dark-3);
+    --text-highlight: var(--text-highlight-dark);
     --background-color: var(--background-light);
     --background-color-2: var(--background-light-2);
     --background-color-3: var(--background-light-3);
@@ -50,6 +52,7 @@ body.dark {
     --text-color: var(--text-light);
     --text-color-2: var(--text-light-2);
     --text-color-3: var(--text-light-3);
+    --text-highlight: var(--text-highlight-light);
     --background-color: var(--background-dark);
     --background-color-2: var(--background-dark-2);
     --background-color-3: var(--background-dark-3);
@@ -63,9 +66,29 @@ main {
     height: 100vh;
     overflow-y: scroll;
 }
+
 section {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 40px;
     overflow: hidden;
+}
+section:not(:first-child) > h2 {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, transparent 50%, var(--background-color) 50%);
+    padding: 0 20px;
+}
+@media (max-width: 900px) {
+    section {
+        padding: 20px;
+    }
 }
 
 a {
@@ -80,6 +103,8 @@ a:hover {
 }
 
 button {
+    font-family: var(--font-text), sans-serif;
+    font-weight: bold;
     cursor: pointer;
     border: none;
     outline: none;

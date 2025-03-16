@@ -1,28 +1,26 @@
 <footer>
-    <p>© 2021 SvelteKit Blog</p>
+    <p>© 2025 MRKB Portfolio</p>
     <p>Powered by SvelteKit</p>
     <p>Developed by <a href="/">MRKB</a></p>
 </footer>
 
 <style>
     footer {
-        position: fixed;
-        bottom: 0;
-        right: 0;
+        height: 40px;
         display: flex;
+        justify-content: flex-end;
         align-items: center;
-        justify-content: center;
-        padding: 1rem;
-        background-color: #333;
-        color: #fff;
+        gap: 10px;
+        background: var(--background-color-3);
+        padding: 0 20px;
     }
 
     footer p {
-        margin: 0.5rem;
+        font-size: 12px;
     }
 
     footer a {
-        color: #fff;
+        color: var(--text-highlight);
         text-decoration: none;
     }
 

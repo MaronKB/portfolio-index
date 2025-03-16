@@ -29,11 +29,6 @@ export let tags: string[] = [];
         </header>
         <img src={img} alt="img" class="image"/>
         <div class="content">
-            <div class="tags">
-                {#each tags as tag}
-                    <span><FontAwesomeIcon icon={faHashtag}/>{tag}</span>
-                {/each}
-            </div>
             <div class="item">
                 <h3>Overview</h3>
                 <slot name="overview"></slot>
@@ -62,7 +57,7 @@ export let tags: string[] = [];
                 <h3>Challenges</h3>
                 <slot name="challenges"></slot>
             </div>
-            <a class="source" href={source}><FontAwesomeIcon icon={faGithub}/>Source<FontAwesomeIcon icon={faUpRightFromSquare}/></a>
+            <a class="source" href={source} target="_blank"><FontAwesomeIcon icon={faGithub}/>Source<FontAwesomeIcon icon={faUpRightFromSquare}/></a>
         </div>
     </div>
 </div>
@@ -164,31 +159,12 @@ export let tags: string[] = [];
     }
 
     .content {
+        position: relative;
         flex: 1;
         width: 100%;
-        padding: 20px 30px;
+        padding: 0 30px;
+        margin: 20px 0;
         overflow-y: auto;
-    }
-
-    .tags {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 4px;
-        font-size: 13px;
-    }
-    .tags span {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2px;
-        white-space: nowrap;
-        color: var(--text-color-3);
-        padding: 3px 8px;
-        border: 1px solid var(--text-color-3);
-        border-radius: 2px;
     }
 
     .item {
