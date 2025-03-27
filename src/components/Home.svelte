@@ -75,7 +75,7 @@
 
     onMount(async () => {
         createBackground();
-        //rewriteSubtitle();
+        rewriteSubtitle();
     });
 </script>
 
