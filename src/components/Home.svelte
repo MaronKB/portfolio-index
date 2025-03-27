@@ -8,7 +8,7 @@
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    let bg: HTMLHeadingElement;
+    let bg: HTMLDivElement;
 
     const jobArr = [
         'Frontend_Developer',
@@ -21,11 +21,13 @@
     ]
 
     const createBackground = async () => {
+        let text = "";
         for (let i = 0; i < 100; i++) {
             jobArr.forEach(job => {
-                bg.innerHTML += `<span class="bg-text" style="opacity: 0.15; transition: all 0.3s">${job}</span><span style="opacity: 0.15">&</span>`;
+                text += `<span class="bg-text" style="opacity: 0.15; transition: all 0.3s">${job}</span><span style="opacity: 0.15">&</span>`;
             });
         }
+        bg.innerHTML = text;
     }
 
     let subtitle: HTMLSpanElement;
@@ -73,7 +75,7 @@
 
     onMount(async () => {
         createBackground();
-        rewriteSubtitle();
+        //rewriteSubtitle();
     });
 </script>
 
@@ -96,6 +98,7 @@
         color: var(--text-color);
         background: linear-gradient(135deg, var(--background-color) 50%, var(--background-color-2) 50%);
         perspective: 1000px;
+        overflow: hidden;
     }
     .logo {
         flex: none;
@@ -105,7 +108,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: radial-gradient(circle, var(--background-color), transparent 50%);
         padding: 40px;
         border-radius: 50%;
         margin: 100px 0 0 0;
@@ -178,6 +180,7 @@
         padding: 0 0 0 20px;
         transform: rotateX(20deg) rotateY(10deg) rotateZ(-20deg) translateZ(200px);
         pointer-events: none;
+        overflow: hidden;
     }
     @keyframes blink {
         0%, 100% {
@@ -213,6 +216,11 @@
             width: 20px;
             height: 10px;
             margin: 0 0 0 2px;
+        }
+    }
+    @media print {
+        .subtitle {
+            display: none;
         }
     }
 </style>

@@ -106,4 +106,9 @@ import {faGithub, faInstagram, faXTwitter} from "@fortawesome/free-brands-svg-ic
         padding: 0 15px;
         margin: 0;
     }
+    @media print {
+        section {
+            display: none;
+        }
+    }
 </style>

@@ -246,4 +246,9 @@
     .toggle:hover {
         background: var(--background-color-2);
     }
+    @media print {
+        .toggle {
+            display: none;
+        }
+    }
 </style>

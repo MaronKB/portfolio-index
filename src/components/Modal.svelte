@@ -17,6 +17,7 @@ export let source: string = "";
             <div class="title">
                 <h3>{title}</h3>
                 <a href={link} target="_blank">{link}</a>
+                <a class="source-link" href={source} target="_blank">{source}</a>
             </div>
             <div class="links">
                 <a href={link} target="_blank"><FontAwesomeIcon icon={faHome}/></a>
@@ -111,6 +112,7 @@ export let source: string = "";
     }
     .title > h3 {
         font-size: 18px;
+        color: var(--text-color);
     }
     .title > a {
         font-size: 12px;
@@ -195,5 +197,50 @@ export let source: string = "";
         color: var(--text-color-3);
         opacity: 0.75;
         margin: 20px 0 0 0;
+    }
+
+    .source-link {
+        display: none;
+    }
+
+    @media print {
+        .modal-background {
+            position: static;
+            width: 100vw;
+            height: 100vh;
+            opacity: 1;
+        }
+        .modal {
+            position: relative;
+            width: 100%;
+            max-width: unset;
+            height: 100%;
+            max-height: unset;
+            border-radius: 0;
+        }
+        .header {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 120px;
+            background: #0004;
+            padding: 0 20px;
+        }
+        .title > a {
+            opacity: 1;
+        }
+        .header .links,
+        .header button {
+            display: none;
+        }
+        .image {
+            height: 120px;
+        }
+        .source {
+            display: none;
+        }
+        .source-link {
+            display: block;
+        }
     }
 </style>

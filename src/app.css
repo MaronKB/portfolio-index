@@ -115,3 +115,40 @@ button {
 #app {
     display: flex;
 }
+
+
+@media print {
+    main {
+        height: fit-content;
+    }
+    section {
+        width: 100vw;
+        min-height: 100vh;
+        padding: 0!important;
+        margin: 0!important;
+        gap: 0!important;
+    }
+    section:not(:first-child) > h2 {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-family: var(--font-text), sans-serif;
+        font-size: 90px;
+        font-weight: bold;
+        writing-mode: vertical-lr;
+        background-image: url("./assets/logo.png");
+        background-position: center;
+        background-size: 900px;
+        background-repeat: no-repeat;
+        padding: 60px 40px;
+        opacity: 0.3;
+    }
+    section:not(:first-child) > h2::after {
+        content: "MRKB";
+        justify-self: flex-end;
+        align-self: flex-end;
+        margin-top: auto;
+    }
+}

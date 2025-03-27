@@ -248,4 +248,23 @@ import nginx from "../assets/nginx.svg";
         margin: 0 auto 0 0;
         pointer-events: none;
     }
+    @media print {
+        .container {
+            flex: none;
+            width: calc(100vw - 80px);
+            height: calc(100vh - 80px);
+            min-height: calc(100vh - 80px);
+            margin: 50px 40px 30px 40px;
+        }
+        .container:nth-of-type(3) {
+            height: calc(50vh + 10px);
+            min-height: calc(50vh + 10px);
+            margin: 60px 40px 20px 40px;
+        }
+        .container:nth-of-type(4) {
+            height: calc(50vh - 140px);
+            min-height: calc(50vh - 140px);
+            margin: 30px 40px 20px 40px;
+        }
+    }
 </style>

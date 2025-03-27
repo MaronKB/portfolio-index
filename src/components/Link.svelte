@@ -171,4 +171,10 @@
     p {
         font-size: 14px;
     }
+
+    @media print {
+        .link {
+            display: none;
+        }
+    }
 </style>

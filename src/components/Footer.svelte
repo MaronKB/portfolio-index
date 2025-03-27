@@ -27,4 +27,10 @@
     footer a:hover {
         text-decoration: underline;
     }
+
+    @media print {
+        footer {
+            display: none;
+        }
+    }
 </style>

@@ -359,4 +359,10 @@
     .opener:hover .open {
         opacity: 1;
     }
+
+    @media print {
+        .header {
+            display: none;
+        }
+    }
 </style>

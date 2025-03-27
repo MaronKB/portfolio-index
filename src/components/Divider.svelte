@@ -35,4 +35,9 @@
         object-fit: contain;
         transform: rotate(-45deg);
     }
+    @media print {
+        .divider {
+            display: none;
+        }
+    }
 </style>

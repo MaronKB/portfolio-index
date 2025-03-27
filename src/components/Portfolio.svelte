@@ -245,7 +245,8 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
                 <li>백엔드(70%) 개발</li>
                 <li><ul class="sub-role">
                     <li>클래스 설계(100%)</li>
-                    <li>외부 API 연동, 로그인 및 회원가입 API 설계 및 구현(100%)</li>
+                    <li>외부 API 연동(100%)</li>
+                    <li>로그인 및 회원가입 API(100%)</li>
                     <li>DB 구조 설계 및 구현(100%)</li>
                     <li>보안 및 인증(100%)</li>
                 </ul></li>
@@ -255,6 +256,12 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
             </ul>
             <ul slot="outcome">
                 <li>휴먼교육센터 개발자 양성 과정 조별 성취도 평가 1위</li>
+            </ul>
+            <ul class="challenges" slot="challenges">
+                <li>요구 스펙 제한으로 인한 기능 구현 불가</li>
+                <li>대대적인 코드 리팩토링에 의한 우회 구현, 일부 기술 스택 타협</li>
+                <li>만남 지점이 도심지나 관광지가 아닌 지역을 가리키는 문제</li>
+                <li>시청/군청/역/터미널 등의 시내 랜드마크를 중심으로 만남 지점을 검색하도록 개선</li>
             </ul>
         </Link>
         <Link
@@ -267,7 +274,7 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
                 summary="외국인을 대상으로 한 한식 맛집 추천 서비스입니다."
         >
             <ul slot="tech-stack">
-                <li>Language: JavaScript, TypeScript, Java</li>
+                <li>Language: JS, TS, Java</li>
                 <li>Frontend: React</li>
                 <li>Backend: Java, Spring Boot</li>
                 <li>Database: Oracle, MongoDB, H2</li>
@@ -289,12 +296,12 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
                 <li>React와 Spring Boot를 사용한 페이지 구성</li>
                 <li>JWT Token을 이용한 회원가입 및 로그인 기능</li>
                 <li>위치 정보 기반 한식 맛집 리스팅</li>
-                <li>네이버 지도, TMap Reverse Geocoding, 주소기반산업서비스 API 등을 이용한 지도상 맛집 표시 서비스</li>
                 <li>사용자 리뷰 작성 및 게시팡 열람 기능</li>
                 <li>JPA Database 검색 알고리즘을 통한 맛집 검색 최적화</li>
                 <li>Websocket을 통한 사용자간 채팅 기능</li>
                 <li>북마크, 리뷰 평가 등을 통한 데이터 사용자화</li>
                 <li>i18n을 통한 한국어, 영어, 일본어 로컬라이징</li>
+                <li>네이버 지도, TMap Reverse Geocoding, 주소기반산업서비스 API 등을 이용한 지도상 맛집 표시 서비스</li>
             </ul>
             <ul slot="role">
                 <li>프로젝트 인원 : 5인</li>
@@ -305,7 +312,7 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
                     <li>로컬라이징 기능 및 번역(100%)</li>
                     <li>랜딩 페이지(100%)</li>
                     <li>맛집 찾기 페이지 + 기능(100%)</li>
-                    <li>네이버 지도 + 지오코딩 + 위치 기반 표시 API(100%)</li>
+                    <li>네이버 지도 + 지오코딩 API(100%)</li>
                     <li>소셜 로그인 기능(100%)</li>
                     <li>맛집 상세 모달(100%)</li>
                     <li>마이페이지 + 기능(100%)</li>
@@ -457,6 +464,7 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
         pointer-events: none;
     }
     ul {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -465,6 +473,7 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
         margin: 0;
     }
     ul li {
+        width: 100%;
         font-size: 14px;
     }
     ul li::before {
@@ -491,5 +500,27 @@ import mrkb_ui from "/src/assets/mrkb-ui-capture.jpg";
     }
     ul.challenges li:nth-child(2n)::before {
         content: "→";
+    }
+    @media print {
+        .container {
+            max-width: unset;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .container h3 {
+            display: none;
+        }
+        ul[slot="tech-stack"]:has(li:nth-of-type(5)),
+        ul.sub-role  {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        ul[slot="key-features"]:has(li:nth-of-type(5)) {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 </style>
